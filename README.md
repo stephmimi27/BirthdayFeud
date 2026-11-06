@@ -2,6 +2,8 @@
 
 A birthday Family Feud game with a white pixel greenhouse, hanging plants, fine lace, sparkles and a winner celebration. Paste survey responses from Google Sheets, type guesses, and award round points to any number of teams.
 
+https://birthdayfeud.vercel.app/
+
 ## Run locally
 
 Install Node.js 24, then run:
@@ -19,33 +21,7 @@ npm run check    # JavaScript syntax checks
 npm run verify   # production build and asset/import verification
 npm run build    # generate dist/ for hosting
 npm run preview  # serve the production build locally
-```
-
-## Deploy to Vercel
-
-1. Unzip the source package. Upload the **contents** of `birthday-feud/` into the root of a GitHub repository, including `package.json`, `package-lock.json`, `vercel.json`, `src/`, `public/` and `scripts/`.
-2. In Vercel, choose **Add New → Project** and import that repository.
-3. Use these settings. The included `vercel.json` already supplies the commands and output folder.
-
-| Setting | Value |
-| --- | --- |
-| Framework preset | Other |
-| Root directory | `./` (the folder containing `package.json`) |
-| Install command | `npm ci` |
-| Build command | `npm run build` |
-| Output directory | `dist` |
-| Node.js | 24.x |
-| Environment variables | None required |
-
-4. Deploy. Subsequent commits to the connected production branch can be deployed by Vercel.
-
-Do not choose `src/`, `public/` or `dist/` as the project root. `dist/` is generated during the build and is intentionally excluded from the source package.
-
-### Move an existing game to the new URL
-
-Saved data belongs to each browser and website address. Your existing Sites game will not automatically appear at a new Vercel address.
-
-On the old game, open **Host controls → Back up or restore your game → Download game backup**. Open that JSON file as text. On the new game, open the same panel, paste the complete file contents, and choose **Restore game backup**. This moves questions, birthday answers, teams, scores and progress.
+``'
 
 ## Where to edit
 
