@@ -1,0 +1,5 @@
+import {escapeHTML as esc} from '../utils/dom.js';
+
+export function answerBoardMarkup({r, a}) {
+  return Array.from({length:6},(_,i)=>`<div class="answer ${i===5?'birthday-answer':''} ${r.revealed[i]&&a[i]?'revealed':''} ${!a[i]&&i!==5?'empty':''}" aria-label="${r.revealed[i]&&a[i]?esc(`Answer ${i+1}: ${a[i].text}${i===5?', the birthday person’s answer':`, ${a[i].count} votes`}`):`Answer ${i+1}${i===5?', birthday person’s answer':''}${!a[i]?', not set yet':', hidden'}`}" data-slot="${i}"><span class="rank">${String(i+1).padStart(2,'0')}</span>${r.revealed[i]&&a[i]?`<span class="answer-text">${esc(a[i].text)}${i===5?'<small>BIRTHDAY ANSWER</small>':''}</span><span class="answer-count">${i===5?'✦':a[i].count}</span>`:`<svg class="slot-sprout" aria-hidden="true"><use href="/assets/icons/sprites.svg#${i===5?'flower':'sprout'}"/></svg><span class="slot-caption">${i===5?(a[i]?'birthday answer':'not set yet'):(a[i]?'Hidden answer':'No responses')}</span><span class="slot-star" aria-hidden="true">${i===5?'✦':'✧'}</span>`}${i===5?'<i class="sparkle sparkle-one">✧</i><i class="sparkle sparkle-two">✦</i>':''}</div>`).join('');
+}

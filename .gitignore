@@ -1,0 +1,9 @@
+
+# Generated output and local configuration
+node_modules/
+dist/
+.build-temp/
+.vercel/
+.env
+.env.*
+.DS_Store

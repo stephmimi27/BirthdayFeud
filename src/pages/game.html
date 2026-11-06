@@ -1,0 +1,160 @@
+<main>
+    <section class="greenhouse" aria-labelledby="hero-title">
+<div class="greenhouse-lines" aria-hidden="true">
+</div>
+<div class="bunting" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
+<svg class="hanging-plant plant-left" aria-hidden="true">
+<use href="/assets/icons/sprites.svg#hanging-vine"/>
+</svg>
+<svg class="hanging-plant plant-right" aria-hidden="true">
+<use href="/assets/icons/sprites.svg#hanging-pearls"/>
+</svg>
+<svg class="scene-balloons" aria-hidden="true">
+<use href="/assets/icons/sprites.svg#balloons"/>
+</svg>
+<svg class="scene-flowers" aria-hidden="true">
+<use href="/assets/icons/sprites.svg#flower-vase"/>
+</svg>
+<div class="small-vine" aria-hidden="true">
+</div>
+      <div class="hero">
+<span class="eyebrow">
+<span>✦</span> THE BIRTHDAY EDITION <span>✦</span>
+</span>
+<h1 id="hero-title">FAMILY FEUD</h1>
+<p>Top 5 survey answers + the birthday person’s answer.</p>
+<div class="hero-pills">
+<span><b id="question-count">23</b> questions</span><i>·</i>
+<span><b id="team-count">2</b> teams</span><i>·</i>
+<span>ready to play <svg>
+<use href="/assets/icons/sprites.svg#sprout"/>
+</svg>
+</span>
+</div>
+</div>
+
+      <div class="game-container">
+<div class="board-sign">
+<span>✿</span> THE ANSWER BOARD <span>✿</span>
+</div>
+<section class="game-board" aria-label="Survey answer board">
+<div class="board-topline">
+<span id="dataset-label">SAMPLE DATA</span>
+<span id="responses-label">64 RESPONSES</span>
+</div>
+<div class="question-card">
+<div class="question-meta">
+<span id="question-number">QUESTION 01</span>
+<span id="multiplier-label">1× POINTS</span>
+</div>
+<h2 id="question-text">Name something you would find at a birthday party.</h2>
+</div>
+<div class="board-middle">
+<span class="board-legend">TOP 5 <i>+</i> <span>✦ BIRTHDAY ANSWER</span>
+</span>
+<div class="pot-label">ROUND POINTS <strong id="round-points">000</strong>
+</div>
+</div>
+<div class="answer-grid" id="answer-grid">
+</div>
+<div class="board-bottom">
+<div class="strikes" aria-label="Strikes">
+<span class="strike" id="strike-0">×</span>
+<span class="strike" id="strike-1">×</span>
+<span class="strike" id="strike-2">×</span>
+<button id="clear-strikes" aria-label="Clear strikes" title="Clear strikes">↺</button>
+</div>
+<span id="answer-status">0 / 6 answers revealed</span>
+<svg class="board-flower" aria-hidden="true">
+<use href="/assets/icons/sprites.svg#flower"/>
+</svg>
+</div>
+</section>
+      <form class="guess-form" id="guess-form" autocomplete="off">
+<div class="guess-topline">
+<label for="guess-team">CURRENT TEAM <select id="guess-team" aria-label="Active team">
+</select>
+</label>
+<button type="button" id="pass-turn">Pass the turn <span>→</span>
+</button>
+</div>
+<div class="guess-entry">
+<svg aria-hidden="true">
+<use href="/assets/icons/sprites.svg#sprout"/>
+</svg>
+<input id="guess-input" aria-label="Type your answer" placeholder="What’s your guess?" autocomplete="off">
+<button type="submit" id="guess-submit">Submit answer <span>↵</span>
+</button>
+</div>
+<div class="guess-footer">
+<div id="guess-feedback" class="guess-feedback" role="status" aria-live="polite">
+</div>
+<div class="guess-footer-actions">
+<button type="button" class="end-round-btn" id="end-round">End round</button>
+<button type="button" class="host-tools" id="host-tools">Host controls <span>⚙</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+      <div class="birthday-note">
+<span>✧</span> Type your answer to reveal a match. <span>✧</span>
+</div>
+    </section>
+
+    <div class="lower-garden">
+<section class="teams-panel" aria-labelledby="teams-heading">
+<div class="section-top">
+<div>
+<span class="section-eyebrow">TEAMS</span>
+<h2 id="teams-heading">Teams <span>✿</span>
+</h2>
+</div>
+<div class="team-heading-tools">
+<button class="text-btn" id="edit-teams">Edit teams <span>↗</span>
+</button>
+<div class="team-pager">
+<button id="prev-teams" aria-label="Previous teams">‹</button>
+<span id="team-page-label">1 / 1</span>
+<button id="next-teams" aria-label="Next teams">›</button>
+</div>
+</div>
+</div>
+<div class="team-grid" id="team-grid">
+</div>
+</section>
+    <section class="rounds-panel" aria-labelledby="rounds-heading">
+<div class="section-top">
+<div>
+<span class="section-eyebrow" id="questions-total">23 QUESTIONS</span>
+<h2 id="rounds-heading">Questions <span id="round-progress">01 / 23</span>
+</h2>
+</div>
+<div class="round-nav">
+<button id="prev-round" aria-label="Previous question">←</button>
+<button id="next-round">Next question <span>→</span>
+</button>
+</div>
+</div>
+<div class="round-picker" id="round-picker" aria-label="Choose a question">
+</div>
+<div class="rounds-bottom">
+<span><i></i> Current round <b>✓</b> Completed round</span>
+<button id="question-list">All questions <span>↗</span>
+</button>
+</div>
+</section>
+    <section class="connection-strip">
+<svg aria-hidden="true">
+<use href="/assets/icons/sprites.svg#sprout-pot"/>
+</svg>
+<div>
+<h3 id="strip-title">Import survey responses</h3>
+<p id="strip-description">Copy questions and responses from Google Sheets, then paste them here.</p>
+</div>
+<button id="strip-import">Import survey <span>→</span>
+</button>
+</section>
+</div>
+  </main>

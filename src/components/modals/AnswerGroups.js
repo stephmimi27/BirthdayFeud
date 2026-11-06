@@ -1,0 +1,5 @@
+import {escapeHTML as esc} from '../../utils/dom.js';
+
+export function answerGroupsMarkup(rules, dataset, state) {
+  return `<p>Uppercase, lowercase and extra spaces are already grouped. Add synonyms or spelling variations below. These also work when you type a guess.</p><label class="field">One group per line · Display name = alternate | another alternate<textarea id="alias-rules" placeholder="Cake = birthday cake | cakes\nBalloons = balloon | baloons">${esc(rules)}</textarea></label><p class="notice">Saving groups resets this round and removes its previous points award.</p><button class="primary-btn" id="save-aliases">Save groups & reset round</button><details class="details-box"><summary>Review this question’s responses (host only)</summary><div class="review-list">${dataset.questions[state.index].answers.map(a=>`<div class="review-answer"><span>${esc(a.text)}</span><b>${a.count}</b></div>`).join('')||'<p>No responses yet.</p>'}</div></details><div id="alias-status" class="inline-status"></div>`;
+}

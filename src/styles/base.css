@@ -1,0 +1,59 @@
+@font-face {
+  font-family:GardenPixel;
+  src:url('/assets/fonts/garden-pixel.ttf') format('truetype');
+  font-display:swap
+}
+* {
+  box-sizing:border-box
+}
+:root {
+  --ink:#3e5541;
+  --sage:#77916c;
+  --deep:#4c6c4a;
+  --muted:#8c9984;
+  --line:#e3e8dc;
+  --paper:#fff;
+  --blush:#d5af9e;
+  --gold:#b99a5f;
+  --pixel:GardenPixel,'Courier New',monospace
+}
+body {
+  margin:0;
+  background:#fff;
+  color:var(--ink);
+  font:14px/1.5 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
+}
+button,input,textarea,select {
+  font:inherit;
+  color:inherit
+}
+button {
+  cursor:pointer
+}
+button,a,input,select,textarea {
+  -webkit-tap-highlight-color:transparent
+}
+button:disabled {
+  cursor:default;
+  opacity:.42
+}
+button,a {
+  touch-action:manipulation
+}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible {
+  outline:3px solid #c6ac76;
+  outline-offset:4px
+}
+a {
+  color:inherit
+}
+button svg {
+  width:18px;
+  height:18px
+}
+.sprite-sheet {
+  position:absolute;
+  width:0;
+  height:0;
+  overflow:hidden
+}

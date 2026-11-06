@@ -1,0 +1,490 @@
+/* Decorative layers stay outside the document flow. */
+.greenhouse {
+  background:radial-gradient(ellipse at 15% 32%,#f6eee93b,transparent 35%),radial-gradient(ellipse at 90% 20%,#fff0cc40,transparent 33%),linear-gradient(180deg,#fff 75%,#fdfaf5)
+}
+.game-board {
+  border-color:#d2ddc7;
+  box-shadow:0 0 0 3px #fffef9,0 0 0 4px #ede8de66,0 9px 24px #92765008;
+  isolation:isolate;
+  background:linear-gradient(145deg,#ffffff,#fffefa)
+}
+.game-board:before,.game-board:after {
+  display:none
+}
+.board-lace {
+  position:absolute;
+  pointer-events:none;
+  z-index:3;
+  image-rendering:auto;
+  filter:drop-shadow(0 1px 1px #aa92741a)
+}
+.lace-top,.lace-bottom {
+  height:26px;
+  left:0;
+  right:0;
+  background:url('/assets/decorations/lace.svg') repeat-x center;
+  background-size:80px 26px
+}
+.lace-top {
+  top:-20px;
+  transform:scaleY(-1)
+}
+.lace-bottom {
+  bottom:-13px
+}
+.lace-left,.lace-right {
+  display:none
+}
+.lace-left {
+  left:-14px;
+  transform:scaleX(-1)
+}
+.lace-right {
+  right:-14px
+}
+.board-sign {
+  z-index:5;
+  background:#fff8ef;
+  border-color:#d6c2a4;
+  box-shadow:2px 2px #e8d5c055;
+  animation:sign-float 5.5s ease-in-out infinite
+}
+.board-sign span {
+  color:#c39d80
+}
+.board-sign:before,.board-sign:after {
+  background:#cdb493
+}
+.hero h1 {
+  color:#68844f;
+  text-shadow:1px 2px 0 #e7ddc780,0 0 22px #e4d3a526
+}
+.eyebrow>span {
+  display:inline-block;
+  animation:title-sparkle 3.4s ease-in-out infinite
+}
+.eyebrow>span:last-child {
+  animation-delay:-1.7s
+}
+.hanging-plant {
+  transform-origin:50% 0;
+  animation:plant-sway 7.6s ease-in-out infinite
+}
+.plant-right {
+  animation-duration:9.2s;
+  animation-delay:-4s
+}
+.scene-balloons {
+  animation:balloon-bob 5.3s ease-in-out infinite;
+  transform-origin:50% 100%
+}
+.scene-flowers {
+  transform-origin:50% 100%;
+  animation:flowers-sway 8.6s ease-in-out infinite
+}
+.ambient-effects {
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  overflow:hidden
+}
+.ambient-star {
+  position:absolute;
+  width:var(--star-size);
+  height:var(--star-size);
+  background:var(--star-color);
+  clip-path:polygon(43% 0,57% 0,57% 29%,71% 43%,100% 43%,100% 57%,71% 57%,57% 71%,57% 100%,43% 100%,43% 71%,29% 57%,0 57%,0 43%,29% 43%,43% 29%);
+  opacity:.5;
+  animation:ambient-glimmer var(--star-speed) ease-in-out var(--star-delay) infinite
+}
+.pixel-flower {
+  clip-path:polygon(33% 0,66% 0,66% 25%,100% 25%,100% 66%,75% 66%,75% 100%,33% 100%,33% 75%,0 75%,0 33%,33% 33%)
+}
+.fairy-lights {
+  position:absolute;
+  top:1px;
+  left:20%;
+  right:20%;
+  height:23px;
+  display:flex;
+  justify-content:space-between;
+  pointer-events:none;
+  z-index:-1;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 24' preserveAspectRatio='none'%3E%3Cpath d='M0 1Q400 19 800 1' stroke='%23c9b997' stroke-width='1' fill='none'/%3E%3C/svg%3E") no-repeat 0 0/100% 100%
+}
+.fairy-lights i {
+  position:relative;
+  top:var(--light-y);
+  width:5px;
+  height:7px;
+  background:var(--light-color);
+  border-bottom:2px solid #baa27d44;
+  box-shadow:0 0 6px 3px #f4d59424;
+  animation:fairy-glow 4s ease-in-out var(--light-delay) infinite
+}
+.fairy-lights i:before {
+  content:'';
+  position:absolute;
+  top:-2px;
+  left:1px;
+  width:3px;
+  height:2px;
+  background:#bba27d
+}
+.bunting {
+  opacity:.45
+}
+.birthday-answer {
+  border-color:#d4b977;
+  background:linear-gradient(115deg,#fff4d9,#fff7ed 55%,#f7e7d5);
+  box-shadow:inset 0 -3px #ecdbb6,0 0 0 1px #f8e8bb80,0 0 15px #ecd79930
+}
+.birthday-answer:before {
+  content:'';
+  position:absolute;
+  inset:1px;
+  pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,#fffdf2aa 47%,transparent 58%);
+  background-size:260% 100%;
+  animation:birthday-shimmer 5.8s ease-in-out infinite;
+  z-index:0
+}
+.birthday-answer .rank,.birthday-answer .answer-text,.birthday-answer .answer-count,.birthday-answer .slot-caption {
+  position:relative;
+  z-index:1
+}
+.birthday-answer .rank {
+  color:#a98846;
+  border-color:#d5b877;
+  background:#f7e7bd;
+  text-shadow:0 0 7px #f6d17980
+}
+.birthday-answer .sparkle {
+  z-index:2;
+  color:#c49a4b;
+  text-shadow:0 0 7px #ecc46588
+}
+.birthday-answer .slot-star {
+  color:#bb8d40;
+  animation:title-sparkle 2.8s ease-in-out infinite
+}
+.answer.revealed {
+  animation:none
+}
+.answer.answer-reveal {
+  animation:answer-flip .55s cubic-bezier(.2,.8,.2,1)
+}
+.answer.birthday-reveal {
+  animation:birthday-reveal 1.35s ease-out
+}
+.birthday-answer.revealed {
+  background:linear-gradient(110deg,#f6e3ae,#fff0cf 60%,#f7e0c3);
+  border-color:#c4a15e;
+  box-shadow:inset 0 -3px #e8ce90,0 0 0 1px #f4e0ac,0 0 18px #e0bd6055
+}
+.points-pop {
+  animation:points-pop .42s ease-out
+}
+.wrong-shake {
+  animation:wrong-shake .4s ease-in-out
+}
+.team-won {
+  animation:team-won 1.45s ease-out
+}
+.team-card.active {
+  border-color:#b6c595;
+  box-shadow:2px 2px #e5d8bb44,0 0 10px #e7d7a41a
+}
+.guess-entry button {
+  background:linear-gradient(#8ba371,#738c5e);
+  border-color:#6c8557;
+  box-shadow:0 2px #58734a,0 0 9px #d3d9aa22
+}
+.guess-entry button:hover {
+  filter:brightness(1.06);
+  box-shadow:0 2px #58734a,0 0 12px #e0d5a455
+}
+.guess-entry button:active {
+  transform:translateY(1px)
+}
+.guess-footer-actions {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  flex-shrink:0
+}
+.end-round-btn {
+  font-size:9px;
+  line-height:1.6;
+  padding:0;
+  border:0;
+  background:none;
+  color:#9a8564;
+  white-space:nowrap
+}
+.end-round-btn:hover {
+  color:#6c7956
+}
+.end-round-btn:disabled {
+  opacity:.6
+}
+.guess-feedback {
+  min-width:0
+}
+#effect-layer {
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:18;
+  contain:strict
+}
+.effect-particle {
+  position:absolute;
+  pointer-events:none;
+  display:block;
+  width:var(--particle-size);
+  height:var(--particle-size);
+  background:var(--particle-color);
+  clip-path:polygon(40% 0,60% 0,60% 30%,70% 40%,100% 40%,100% 60%,70% 60%,60% 70%,60% 100%,40% 100%,40% 70%,30% 60%,0 60%,0 40%,30% 40%,40% 30%);
+  opacity:0;
+  animation:particle-burst var(--particle-life) cubic-bezier(.15,.6,.4,1) forwards
+}
+.flower-particle {
+  clip-path:polygon(30% 0,70% 0,70% 25%,100% 25%,100% 70%,75% 70%,75% 100%,30% 100%,30% 75%,0 75%,0 30%,30% 30%)
+}
+@keyframes plant-sway {
+  0%,100% {
+    transform:rotate(-1.7deg)
+  }
+  50% {
+    transform:rotate(1.7deg)
+  }
+}
+@keyframes balloon-bob {
+  0%,100% {
+    transform:translateY(0) rotate(-7deg)
+  }
+  50% {
+    transform:translateY(-7px) rotate(-4deg)
+  }
+}
+@keyframes flowers-sway {
+  0%,100% {
+    transform:rotate(-.8deg)
+  }
+  50% {
+    transform:rotate(.8deg)
+  }
+}
+@keyframes sign-float {
+  0%,100% {
+    transform:translateY(0)
+  }
+  50% {
+    transform:translateY(-1.5px)
+  }
+}
+@keyframes ambient-glimmer {
+  0%,100% {
+    opacity:.18;
+    transform:translateY(3px) scale(.7) rotate(0)
+  }
+  45% {
+    opacity:.85;
+    transform:translateY(-4px) scale(1.15) rotate(12deg)
+  }
+  70% {
+    opacity:.35;
+    transform:translateY(-1px) scale(.85) rotate(4deg)
+  }
+}
+@keyframes fairy-glow {
+  0%,100% {
+    opacity:.5;
+    box-shadow:0 0 4px 1px #f3cf8c20
+  }
+  50% {
+    opacity:1;
+    box-shadow:0 0 8px 4px #f2ce8a55
+  }
+}
+@keyframes title-sparkle {
+  0%,100% {
+    opacity:.45;
+    transform:scale(.8)
+  }
+  50% {
+    opacity:1;
+    transform:scale(1.2)
+  }
+}
+@keyframes birthday-shimmer {
+  0%,35% {
+    background-position:120% 0
+  }
+  85%,100% {
+    background-position:-80% 0
+  }
+}
+@keyframes answer-flip {
+  0% {
+    transform:perspective(500px) rotateX(-65deg) scale(.97);
+    opacity:.5
+  }
+  65% {
+    transform:perspective(500px) rotateX(6deg) scale(1.015);
+    opacity:1
+  }
+  100% {
+    transform:none;
+    opacity:1
+  }
+}
+@keyframes birthday-reveal {
+  0% {
+    transform:scale(.94);
+    box-shadow:0 0 0 0 #e2c16e99
+  }
+  28% {
+    transform:scale(1.04);
+    box-shadow:0 0 22px 8px #ecc77466
+  }
+  55% {
+    transform:scale(.99);
+    box-shadow:0 0 12px 4px #eac67144
+  }
+  75% {
+    transform:scale(1.015)
+  }
+  100% {
+    transform:scale(1);
+    box-shadow:0 0 18px #e0bd6055
+  }
+}
+@keyframes points-pop {
+  0% {
+    transform:scale(1)
+  }
+  40% {
+    transform:scale(1.18);
+    color:#b08e40
+  }
+  100% {
+    transform:scale(1)
+  }
+}
+@keyframes wrong-shake {
+  0%,100% {
+    transform:translateX(0)
+  }
+  20%,60% {
+    transform:translateX(-3px)
+  }
+  40%,80% {
+    transform:translateX(3px)
+  }
+}
+@keyframes team-won {
+  0%,100% {
+    box-shadow:2px 2px #e5d8bb44
+  }
+  30% {
+    box-shadow:0 0 0 2px #d5b87b,0 0 20px #e7ca7c77;
+    background:#fff9e7
+  }
+  70% {
+    box-shadow:0 0 0 1px #d5b87b55,0 0 12px #e7ca7c44
+  }
+}
+@keyframes particle-burst {
+  0% {
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.3) rotate(0)
+  }
+  12% {
+    opacity:1
+  }
+  65% {
+    opacity:.85
+  }
+  100% {
+    opacity:0;
+    transform:translate(calc(-50% + var(--particle-dx)),calc(-50% + var(--particle-dy))) scale(.6) rotate(var(--particle-rotate))
+  }
+}
+@media(max-width:739px) {
+  .lace-top,.lace-bottom {
+    height:19px;
+    left:0;
+    right:0;
+    background-size:59px 19px
+  }
+  .lace-top {
+    top:-14px
+  }
+  .lace-bottom {
+    bottom:-9px
+  }
+  .lace-left,.lace-right {
+    width:15px;
+    top:5px;
+    bottom:5px;
+    background-size:15px 26px
+  }
+  .lace-left {
+    left:-10px
+  }
+  .lace-right {
+    right:-10px
+  }
+  .fairy-lights {
+    left:12%;
+    right:12%;
+    opacity:.7
+  }
+  .fairy-lights i {
+    width:4px;
+    height:6px
+  }
+  .ambient-star {
+    opacity:.4
+  }
+  .guess-footer-actions {
+    gap:10px
+  }
+  .end-round-btn {
+    font-size:8px
+  }
+}
+@media(max-height:630px) {
+  .end-round-btn {
+    font-size:7px
+  }
+  .guess-footer-actions {
+    gap:9px
+  }
+  .lace-top,.lace-bottom {
+    height:17px;
+    background-size:53px 17px
+  }
+  .lace-top {
+    top:-12px
+  }
+  .lace-bottom {
+    bottom:-8px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hanging-plant,.scene-balloons,.scene-flowers,.board-sign,.ambient-star,.fairy-lights i,.eyebrow>span,.birthday-answer:before,.birthday-answer .slot-star,.answer.answer-reveal,.answer.birthday-reveal,.points-pop,.wrong-shake,.team-won,.sparkle {
+    animation:none!important;
+    transition:none!important
+  }
+  .effect-particle {
+    display:none
+  }
+  .ambient-star {
+    opacity:.4
+  }
+}

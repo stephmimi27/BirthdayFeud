@@ -1,0 +1,19 @@
+{
+  "name": "birthday-feud",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Birthday Family Feud with survey imports, typed guesses and winner celebrations.",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "start": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/dev.mjs --no-watch",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "verify": "npm run build && node scripts/verify-build.mjs"
+  }
+}

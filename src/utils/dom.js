@@ -1,0 +1,5 @@
+export const byId = id => document.getElementById(id);
+
+export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+})[char]);

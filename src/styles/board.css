@@ -1,0 +1,478 @@
+.game-container {
+  width:100%;
+  max-width:756px;
+  margin:0 auto
+}
+.board-sign {
+  position:relative;
+  margin:0 auto -1px;
+  background:#fcf9f1;
+  border:1px solid #d8cfb7;
+  padding:10px 20px;
+  width:max-content;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  font:8px var(--pixel);
+  letter-spacing:1px;
+  z-index:2;
+  box-shadow:2px 2px #e7e8dc
+}
+.board-sign span {
+  font:16px system-ui;
+  color:#c5a27e
+}
+.board-sign:before,.board-sign:after {
+  content:'';
+  position:absolute;
+  top:-13px;
+  height:13px;
+  width:2px;
+  background:#c7b89d
+}
+.board-sign:before {
+  left:24px
+}
+.board-sign:after {
+  right:24px
+}
+.game-board {
+  position:relative;
+  background:#fff;
+  border:3px solid #c9d6be;
+  outline:1px solid #edf0e8;
+  padding:17px 24px 13px;
+  box-shadow:5px 5px #e6ebdf55,0 16px 40px #657e4f08
+}
+.game-board:before,.game-board:after {
+  content:'';
+  position:absolute;
+  top:-3px;
+  width:9px;
+  height:9px;
+  background:#f6f6e8;
+  border:1px solid #a9bc98
+}
+.game-board:before {
+  left:-3px
+}
+.game-board:after {
+  right:-3px
+}
+.board-topline {
+  font-size:8px;
+  letter-spacing:1.4px;
+  color:#9cab8c;
+  display:flex;
+  justify-content:space-between;
+  padding-bottom:13px
+}
+.board-topline>span:first-child:before {
+  content:'';
+  display:inline-block;
+  width:4px;
+  height:4px;
+  background:#adc18f;
+  margin-right:7px;
+  vertical-align:middle
+}
+.question-card {
+  background:#fcfdf8;
+  padding:15px 18px 16px;
+  border:1px solid #e9eddf;
+  min-height:110px;
+  display:flex;
+  justify-content:center;
+  flex-direction:column
+}
+.question-meta {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#92a27f;
+  font-size:8px;
+  letter-spacing:1.5px;
+  font-weight:550
+}
+#multiplier-label {
+  font-size:7px;
+  color:#b2a27b
+}
+#question-text {
+  font-size:21px;
+  font-weight:550;
+  letter-spacing:-.25px;
+  line-height:1.5;
+  margin:10px 0 0;
+  color:#4a6344
+}
+.board-middle {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:18px 0 12px
+}
+.board-legend {
+  font-size:8px;
+  color:#98a785;
+  letter-spacing:1px;
+  display:flex;
+  gap:7px;
+  align-items:center
+}
+.board-legend i {
+  font-style:normal;
+  color:#c8c7a7
+}
+.board-legend>span {
+  color:#bda16a;
+  letter-spacing:.5px
+}
+.pot-label {
+  font-size:7px;
+  letter-spacing:1px;
+  color:#9baa8a;
+  display:flex;
+  align-items:center;
+  gap:9px
+}
+.pot-label strong {
+  background:#f3f6e9;
+  border:1px solid #d5e0c7;
+  padding:7px 9px 4px;
+  color:#73905b;
+  font:20px var(--pixel);
+  letter-spacing:2px;
+  min-width:72px;
+  text-align:center
+}
+.answer-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-rows:repeat(3,minmax(62px,auto));
+  grid-auto-flow:column;
+  gap:10px 13px
+}
+.answer {
+  border:1px solid #dce5cf;
+  background:#f8faf3;
+  box-shadow:inset 0 -3px #eef2e5;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+  padding:10px 13px;
+  position:relative;
+  min-height:62px
+}
+.rank {
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border:1px solid #d5e0c3;
+  min-width:32px;
+  height:29px;
+  background:#f1f5e7;
+  font:10px var(--pixel);
+  color:#98ad7e;
+  padding-top:2px
+}
+.slot-sprout {
+  position:absolute;
+  right:39px;
+  width:21px;
+  height:21px;
+  color:#d8e2ca
+}
+.slot-caption {
+  font-size:10px;
+  color:#b3bea5;
+  letter-spacing:.2px
+}
+.slot-star {
+  position:absolute;
+  right:12px;
+  color:#c6d4b5;
+  font-size:17px
+}
+.answer.revealed {
+  border-color:#bdcfa6;
+  background:#eaf1df;
+  box-shadow:inset 0 -3px #dde8cc;
+  animation:bloom .3s ease-out
+}
+.answer.revealed .rank {
+  border-color:#b5c99c;
+  background:#dce8cb;
+  color:#7b975b
+}
+.answer-text {
+  font-size:14px;
+  line-height:1.35;
+  font-weight:550;
+  color:#4b6640;
+  flex:1;
+  overflow-wrap:anywhere
+}
+.answer-count {
+  font:18px var(--pixel);
+  border-left:1px solid #c8d6b4;
+  padding-left:11px;
+  color:#739251;
+  flex-shrink:0
+}
+.answer.empty {
+  opacity:.55
+}
+.birthday-answer {
+  background:#fffaf0;
+  border-color:#e3cfa0;
+  box-shadow:inset 0 -3px #f5ead1
+}
+.birthday-answer .rank {
+  background:#f8efd8;
+  border-color:#dfc78d;
+  color:#b09655;
+  text-shadow:0 0 6px #dfbd64aa
+}
+.birthday-answer .slot-caption {
+  color:#bea878;
+  font-size:10px
+}
+.birthday-answer .slot-sprout {
+  color:#e2c999
+}
+.birthday-answer .slot-star {
+  color:#c7a15e
+}
+.birthday-answer.revealed {
+  background:#fbefd6;
+  border-color:#d5b574;
+  box-shadow:inset 0 -3px #ecd9ac
+}
+.birthday-answer.revealed .rank {
+  background:#efdba9;
+  border-color:#d5bb7f;
+  color:#9e7c39
+}
+.birthday-answer .answer-text {
+  color:#947d4a
+}
+.birthday-answer .answer-count {
+  color:#b79954;
+  border-color:#dfc992;
+  font:26px system-ui
+}
+.answer-text small {
+  display:block;
+  font-size:7px;
+  font-weight:500;
+  letter-spacing:1px;
+  color:#b69b65;
+  margin-top:4px
+}
+.sparkle {
+  position:absolute;
+  color:#c5a25e;
+  font-style:normal;
+  pointer-events:none;
+  animation:twinkle 2.7s ease-in-out infinite
+}
+.sparkle-one {
+  top:-12px;
+  right:21px;
+  font-size:16px
+}
+.sparkle-two {
+  bottom:-10px;
+  right:-8px;
+  font-size:18px;
+  animation-delay:1.3s
+}
+.board-bottom {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:12px;
+  min-height:25px;
+  color:#a1ae90
+}
+.strikes {
+  display:flex;
+  gap:7px;
+  align-items:center
+}
+.strike {
+  font:27px/22px system-ui;
+  width:20px;
+  color:#e0e6d7
+}
+.strike.on {
+  color:#cf9e8a;
+  text-shadow:1px 1px #ecd5c5
+}
+.strikes button {
+  background:none;
+  border:0;
+  color:#a7b391;
+  padding:0 3px;
+  font-size:15px;
+  margin-left:3px
+}
+#answer-status {
+  font-size:9px;
+  letter-spacing:.2px
+}
+.board-flower {
+  width:17px;
+  height:17px;
+  color:#d8baa4
+}
+.guess-form {
+  margin-top:22px;
+  padding:0 1px
+}
+.guess-topline {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:9px
+}
+.guess-topline label {
+  font-size:7px;
+  letter-spacing:1.2px;
+  color:#a3ae95;
+  display:flex;
+  gap:8px;
+  align-items:center
+}
+.guess-topline select {
+  border:0;
+  border-bottom:1px solid #dfe5d5;
+  padding:0 17px 2px 0;
+  background:transparent;
+  font-size:10px;
+  font-weight:550;
+  letter-spacing:0;
+  color:#7e956a;
+  max-width:210px;
+  border-radius:0
+}
+.guess-topline>button {
+  background:none;
+  border:0;
+  font-size:9px;
+  color:#94a381;
+  padding:0
+}
+.guess-topline>button span {
+  margin-left:10px
+}
+.guess-entry {
+  border:1px solid #c9d8bc;
+  box-shadow:0 3px #edf1e6;
+  display:flex;
+  align-items:center;
+  background:white;
+  min-height:52px;
+  padding:5px 6px 5px 15px;
+  gap:12px
+}
+.guess-entry>svg {
+  width:20px;
+  height:20px;
+  color:#b5c79e;
+  flex-shrink:0
+}
+.guess-entry input {
+  min-width:0;
+  flex:1;
+  border:0;
+  outline:0;
+  background:none;
+  font-size:14px;
+  padding:8px 0;
+  color:#526c48
+}
+.guess-entry input::placeholder {
+  color:#b0bba5
+}
+.guess-entry:focus-within {
+  outline:2px solid #c5d7b1;
+  outline-offset:2px
+}
+.guess-entry input:focus-visible {
+  outline:0
+}
+.guess-entry button {
+  border:1px solid #6f895d;
+  background:#7d966b;
+  color:#fffef4;
+  box-shadow:0 2px #58734a;
+  padding:10px 16px;
+  font-size:11px;
+  display:flex;
+  gap:20px;
+  align-items:center;
+  white-space:nowrap
+}
+.guess-entry button:hover {
+  background:#6f895d
+}
+.guess-entry button span {
+  font-size:16px;
+  line-height:16px;
+  color:#e1e9d4
+}
+.guess-footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:start;
+  gap:14px;
+  margin-top:11px;
+  min-height:22px
+}
+.guess-feedback {
+  font-size:10px;
+  color:#a4af96;
+  flex:1;
+  line-height:1.7
+}
+.guess-feedback.correct {
+  color:#779358
+}
+.guess-feedback.wrong {
+  color:#ba8e79
+}
+.guess-feedback.duplicate,.guess-feedback.info {
+  color:#a99564
+}
+.feedback-symbol {
+  font-size:13px;
+  vertical-align:middle;
+  margin-right:4px
+}
+.host-tools {
+  font-size:9px;
+  border:0;
+  background:none;
+  color:#a5b195;
+  padding:0;
+  white-space:nowrap
+}
+.host-tools span {
+  font-size:12px;
+  margin-left:5px
+}
+.birthday-note {
+  text-align:center;
+  font-size:9px;
+  color:#b1b8a5;
+  margin-top:20px;
+  letter-spacing:.3px
+}
+.birthday-note span {
+  margin:0 11px;
+  color:#c7b488;
+  font-size:13px
+}
