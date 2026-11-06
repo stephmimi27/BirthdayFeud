@@ -23,61 +23,6 @@ npm run build    # generate dist/ for hosting
 npm run preview  # serve the production build locally
 ```
 
-## Deploy to Vercel
-
-1. Unzip the source package. Upload the **contents** of `birthday-feud/` into the root of a GitHub repository, including `package.json`, `package-lock.json`, `vercel.json`, `src/`, `public/` and `scripts/`.
-2. In Vercel, choose **Add New → Project** and import that repository.
-3. Use these settings. The included `vercel.json` already supplies the commands and output folder.
-
-| Setting | Value |
-| --- | --- |
-| Framework preset | Other |
-| Root directory | `./` (the folder containing `package.json`) |
-| Install command | `npm ci` |
-| Build command | `npm run build` |
-| Output directory | `dist` |
-| Node.js | 24.x |
-| Environment variables | None required |
-
-4. Deploy. Subsequent commits to the connected production branch can be deployed by Vercel.
-
-Do not choose `src/`, `public/` or `dist/` as the project root. `dist/` is generated during the build and is intentionally excluded from the source package.
-
-### Move an existing game to the new URL
-
-Saved data belongs to each browser and website address. Your existing Sites game will not automatically appear at a new Vercel address.
-
-On the old game, open **Host controls → Back up or restore your game → Download game backup**. Open that JSON file as text. On the new game, open the same panel, paste the complete file contents, and choose **Restore game backup**. This moves questions, birthday answers, teams, scores and progress.
-
-## Where to edit
-
-The project is split into folders so individual parts can be edited without searching through one large HTML file.
-
-| Location | Purpose |
-| --- | --- |
-| `index.html` | Small page shell, CSS links and script entry |
-| `src/pages/game.html` | Game page layout and decorations |
-| `src/components/*.html` | Header, footer and dialog shell |
-| `src/components/*.js` | Answer board, team cards, question navigation and results |
-| `src/components/modals/` | Survey import, teams, rules and host panels |
-| `src/app.js` | Connects UI events to the game and renders state |
-| `src/game/data.js` | TSV parsing, answer grouping and survey validation |
-| `src/game/engine.js` | Guesses, strikes, round scores, awards and winners |
-| `src/data/sampleQuestions.js` | Demo survey; imported surveys have no question limit |
-| `src/state/storage.js` | Browser persistence |
-| `src/effects/animations.js` | Sparkles, answer effects and celebrations |
-| `src/styles/` | Separate base, layout, board, teams, dialogs, responsive, effects and results CSS |
-| `src/utils/dom.js` | Small shared DOM and text helpers |
-| `public/assets/` | SVG icons, lace decorations and pixel font |
-| `scripts/` | Build, local server and validation tools |
-| `tests/` | Survey and game regression tests |
-| `tools/make_pixel_font.py` | Optional utility for regenerating the bundled pixel font |
-| `vercel.json` | Vercel build settings |
-
-The build expands `<!-- @include ... -->` markers from the root HTML file, copies JavaScript and CSS, and adds public assets to `dist/`. Raw component HTML files are build inputs. Edit source files, not generated `dist/` files.
-
-CSS loads in this order: base, layout, board, teams, dialogs, responsive, effects, results. Preserve that order when changing the page shell.
-
 ## Party themes
 
 Choose **Theme** in the top bar to switch between Garden, Classic birthday, Pajama party, Celestial, and Ocean. Each uses pixel illustrations, matching colors and scene decorations. Classic birthday features a strawberry layer cake, candles, balloons, wrapped gifts, confetti and icing borders. Ocean features a coral reef, fish, jellyfish, a seahorse, pearl shells, a treasure chest and wave borders. Pajama party features chamomile tea, a curtained moonlit window, books, candlelight and a sleeping cat. Celestial features a deep starfield, constellations, a crescent moon, Saturn and a telescope with gold moon-phase borders. Your choice saves automatically in this browser, separately from game progress.
