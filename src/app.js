@@ -1,3 +1,4 @@
+import {initThemes} from './themes.js';
 import {byId as $, escapeHTML as esc} from './utils/dom.js';
 import {readStorage as stored, writeGameStorage} from './state/storage.js';
 import {surveyImportMarkup} from './components/modals/SurveyImport.js';
@@ -21,6 +22,7 @@ import {resultsMarkup} from './components/results.js';
 
 let dataset=demoDataset(),state=freshState(dataset.questions.length),history=[],feedback=null,pasteDraft='',teamPage=0,toastTimer,audioContext;
 let resultsTimer,lastResultsShown='';
+let refreshThemeIcons = () => {};
 const teamPageSize=()=>window.innerWidth>=1000?4:window.innerWidth>=740?3:2;
 const roundPageSize=()=>window.innerWidth>=740?10:8;
 try{const cached=stored('birthday-feud-dataset',null);if(cached)dataset=validateDataset(cached);state=freshState(dataset.questions.length);const previous=stored('birthday-feud-state',null);if(previous)state=restoreState(previous,dataset.questions.length);}catch{state=freshState(dataset.questions.length);}
@@ -56,6 +58,7 @@ function render(){
   $('team-grid').style.setProperty('--visible-team-count',Math.min(perPage,state.teams.length-teamPage*perPage));
   $('team-page-label').textContent=`${teamPage+1} / ${pages}`;$('prev-teams').disabled=teamPage===0;$('next-teams').disabled=teamPage===pages-1;
   $('team-grid').innerHTML=teamCardsMarkup({state, r, teamPage, perPage, points: pot()});
+  refreshThemeIcons();
   $('round-progress').textContent=String(state.index+1).padStart(2,'0')+' / '+String(count).padStart(2,'0');$('prev-round').disabled=state.index===0;
   const complete=Boolean(r.finished||r.awarded);$('next-round').disabled=false;
   const nextLabel=summary.ready?'View results':!complete?'End round and reveal all answers':state.index<count-1?'Next question':summary.pendingRounds.length?'Review unassigned points':'Continue unfinished rounds';
@@ -149,4 +152,5 @@ $('fullscreen').onclick=async()=>{try{if(!document.fullscreenElement){await docu
 document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)document.body.classList.remove('presentation');});
 document.querySelector('.dialog-close').onclick=closeDialog;$('main-dialog').onclick=e=>{if(e.target===$('main-dialog')){const rect=e.target.getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)closeDialog();}};
 document.addEventListener('keydown',e=>{if($('main-dialog').open||e.altKey||e.ctrlKey||e.metaKey||e.repeat||/INPUT|TEXTAREA|SELECT|BUTTON/.test(e.target.tagName))return;if(e.key==='ArrowRight'){e.preventDefault();advanceRound();}else if(e.key==='ArrowLeft'){e.preventDefault();setRound(state.index-1);}else if(e.key.toLowerCase()==='m')$('sound-toggle').click();});
+refreshThemeIcons = initThemes({openDialog, toast});
 render();initEffects();queueResults(800);

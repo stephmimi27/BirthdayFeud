@@ -1065,14 +1065,14 @@ main {
   height:20px;
   line-height:15px;
   padding:0;
-  border:1px solid #e0e7d6;
-  background:#f9fcf3;
-  color:#9aab85;
+  border:1px solid var(--theme-tone-e0e7d6, #e0e7d6);
+  background:var(--theme-tone-f9fcf3, #f9fcf3);
+  color:var(--theme-tone-9aab85, #9aab85);
   font-size:17px
 }
 .team-pager>span {
   font-size:8px;
-  color:#a6b497;
+  color:var(--theme-tone-a6b497, #a6b497);
   white-space:nowrap
 }
 .team-grid {

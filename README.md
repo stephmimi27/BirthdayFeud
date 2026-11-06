@@ -76,6 +76,10 @@ The build expands `<!-- @include ... -->` markers from the root HTML file, copie
 
 CSS loads in this order: base, layout, board, teams, dialogs, responsive, effects, results. Preserve that order when changing the page shell.
 
+## Party themes
+
+Choose **Theme** in the top bar to switch between Garden, Classic birthday, Pajama party, Glitter and stars, and Ocean. Each uses pixel illustrations, matching colors and scene decorations. Your choice saves automatically in this browser, separately from game progress.
+
 ## Import your survey
 
 Copy a rectangular selection from Google Sheets and paste it under **Import survey**. The first row is question headings, with responses underneath each question. Select question columns only; leave out timestamps and email addresses. Quoted tabs, embedded newlines and escaped quotation marks are supported.

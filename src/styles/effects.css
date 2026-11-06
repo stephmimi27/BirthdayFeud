@@ -1,12 +1,12 @@
 /* Decorative layers stay outside the document flow. */
 .greenhouse {
-  background:radial-gradient(ellipse at 15% 32%,#f6eee93b,transparent 35%),radial-gradient(ellipse at 90% 20%,#fff0cc40,transparent 33%),linear-gradient(180deg,#fff 75%,#fdfaf5)
+  background:radial-gradient(ellipse at 15% 32%,#f6eee93b,transparent 35%),radial-gradient(ellipse at 90% 20%,#fff0cc40,transparent 33%),linear-gradient(180deg,var(--theme-tone-fff, #fff) 75%,#fdfaf5)
 }
 .game-board {
-  border-color:#d2ddc7;
+  border-color:var(--theme-tone-d2ddc7, #d2ddc7);
   box-shadow:0 0 0 3px #fffef9,0 0 0 4px #ede8de66,0 9px 24px #92765008;
   isolation:isolate;
-  background:linear-gradient(145deg,#ffffff,#fffefa)
+  background:linear-gradient(145deg,var(--theme-tone-ffffff, #ffffff),#fffefa)
 }
 .game-board:before,.game-board:after {
   display:none
@@ -56,7 +56,7 @@
   background:#cdb493
 }
 .hero h1 {
-  color:#68844f;
+  color:var(--theme-tone-68844f, #68844f);
   text-shadow:1px 2px 0 #e7ddc780,0 0 22px #e4d3a526
 }
 .eyebrow>span {
@@ -193,17 +193,17 @@
   animation:team-won 1.45s ease-out
 }
 .team-card.active {
-  border-color:#b6c595;
+  border-color:var(--theme-tone-b6c595, #b6c595);
   box-shadow:2px 2px #e5d8bb44,0 0 10px #e7d7a41a
 }
 .guess-entry button {
-  background:linear-gradient(#8ba371,#738c5e);
-  border-color:#6c8557;
-  box-shadow:0 2px #58734a,0 0 9px #d3d9aa22
+  background:linear-gradient(var(--theme-tone-8ba371, #8ba371),var(--theme-tone-738c5e, #738c5e));
+  border-color:var(--theme-tone-6c8557, #6c8557);
+  box-shadow:0 2px var(--theme-tone-58734a, #58734a),0 0 9px var(--theme-tone-d3d9aa22, #d3d9aa22)
 }
 .guess-entry button:hover {
   filter:brightness(1.06);
-  box-shadow:0 2px #58734a,0 0 12px #e0d5a455
+  box-shadow:0 2px var(--theme-tone-58734a, #58734a),0 0 12px #e0d5a455
 }
 .guess-entry button:active {
   transform:translateY(1px)
@@ -224,7 +224,7 @@
   white-space:nowrap
 }
 .end-round-btn:hover {
-  color:#6c7956
+  color:var(--theme-tone-6c7956, #6c7956)
 }
 .end-round-btn:disabled {
   opacity:.6

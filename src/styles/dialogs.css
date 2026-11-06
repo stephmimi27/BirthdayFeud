@@ -7,10 +7,10 @@
   opacity:0;
   pointer-events:none;
   background:#fffef8;
-  border:1px solid #b5c99e;
+  border:1px solid var(--theme-tone-b5c99e, #b5c99e);
   padding:12px 22px;
-  box-shadow:4px 4px #d3dfc288;
-  color:#688451;
+  box-shadow:4px 4px var(--theme-tone-d3dfc288, #d3dfc288);
+  color:var(--theme-tone-688451, #688451);
   font-size:12px;
   max-width:calc(100% - 24px);
   text-align:center;
@@ -21,17 +21,17 @@
   opacity:1
 }
 dialog {
-  border:1px solid #c7d5b8;
+  border:1px solid var(--theme-tone-c7d5b8, #c7d5b8);
   width:670px;
   max-width:calc(100% - 32px);
   padding:0;
   max-height:90vh;
-  background:#fff;
+  background:var(--theme-tone-fff, #fff);
   color:var(--ink);
-  box-shadow:7px 7px #d5dfc66b,0 20px 100px #36432d30
+  box-shadow:7px 7px var(--theme-tone-d5dfc66b, #d5dfc66b),0 20px 100px var(--theme-tone-36432d30, #36432d30)
 }
 dialog::backdrop {
-  background:#30432c55;
+  background:var(--theme-tone-30432c55, #30432c55);
   backdrop-filter:blur(4px)
 }
 .dialog-header {
@@ -39,21 +39,21 @@ dialog::backdrop {
   justify-content:space-between;
   align-items:center;
   padding:23px 27px 19px;
-  border-bottom:1px solid #edf0e7;
-  background:#fcfdf8
+  border-bottom:1px solid var(--theme-tone-edf0e7, #edf0e7);
+  background:var(--theme-tone-fcfdf8, #fcfdf8)
 }
 .dialog-header h2 {
   font:15px/1.6 var(--pixel);
   letter-spacing:-.3px;
-  color:#789264;
+  color:var(--theme-tone-789264, #789264);
   margin:8px 15px 0 0
 }
 .dialog-close {
   font-size:24px;
   font-weight:300;
-  color:#a7b495;
+  color:var(--theme-tone-a7b495, #a7b495);
   background:none;
-  border:1px solid #e3e9da;
+  border:1px solid var(--theme-tone-e3e9da, #e3e9da);
   line-height:27px;
   width:30px;
   height:30px;
@@ -65,32 +65,32 @@ dialog::backdrop {
 #dialog-body p {
   font-size:12px;
   line-height:1.8;
-  color:#94a285
+  color:var(--theme-tone-94a285, #94a285)
 }
 #dialog-body p:first-child {
   margin-top:0
 }
 .dialog-intro strong {
   font-weight:500;
-  color:#7f936f
+  color:var(--theme-tone-7f936f, #7f936f)
 }
 .paste-guide {
   display:grid;
   grid-template-columns:1fr 1fr;
-  border:1px solid #e1e8d8;
+  border:1px solid var(--theme-tone-e1e8d8, #e1e8d8);
   font-size:10px;
-  color:#a3b192;
+  color:var(--theme-tone-a3b192, #a3b192);
   margin:18px 0
 }
 .paste-guide>* {
   padding:6px 11px;
-  border-bottom:1px solid #edf0e7;
-  border-right:1px solid #edf0e7;
+  border-bottom:1px solid var(--theme-tone-edf0e7, #edf0e7);
+  border-right:1px solid var(--theme-tone-edf0e7, #edf0e7);
   font-style:normal
 }
 .paste-guide span {
-  background:#f3f7ec;
-  color:#859c70;
+  background:var(--theme-tone-f3f7ec, #f3f7ec);
+  color:var(--theme-tone-859c70, #859c70);
   font-weight:500
 }
 .paste-guide i:nth-last-child(-n+2) {
@@ -99,16 +99,16 @@ dialog::backdrop {
 .field {
   display:block;
   font-size:11px;
-  color:#8a9f79;
+  color:var(--theme-tone-8a9f79, #8a9f79);
   margin:15px 0
 }
 .field input,.field select,.field textarea {
   display:block;
   width:100%;
   margin-top:7px;
-  border:1px solid #d8e2cd;
+  border:1px solid var(--theme-tone-d8e2cd, #d8e2cd);
   background:#fffefa;
-  color:#637c52;
+  color:var(--theme-tone-637c52, #637c52);
   border-radius:0;
   padding:11px;
   font-size:12px
@@ -128,11 +128,11 @@ dialog::backdrop {
   overflow:auto;
   font:11px/1.8 'Courier New',monospace;
   letter-spacing:0;
-  background:#fcfdf8;
+  background:var(--theme-tone-fcfdf8, #fcfdf8);
   padding:13px
 }
 .field input::placeholder,.field textarea::placeholder {
-  color:#b9c3ad
+  color:var(--theme-tone-b9c3ad, #b9c3ad)
 }
 .birthday-row-label {
   font-size:11px;
@@ -147,12 +147,12 @@ dialog::backdrop {
 .small-label {
   font-size:10px!important;
   line-height:1.7;
-  color:#a5b097!important;
+  color:var(--theme-tone-a5b097, #a5b097)!important;
   display:block
 }
 .paste-preview {
   font-size:10px;
-  color:#a7b397;
+  color:var(--theme-tone-a7b397, #a7b397);
   min-height:40px;
   display:flex;
   gap:8px;
@@ -162,13 +162,13 @@ dialog::backdrop {
 }
 .paste-preview strong {
   font-weight:500;
-  color:#80996b
+  color:var(--theme-tone-80996b, #80996b)
 }
 .preview-check {
-  border:1px solid #c5d6b0;
-  background:#f2f7e8;
+  border:1px solid var(--theme-tone-c5d6b0, #c5d6b0);
+  background:var(--theme-tone-f2f7e8, #f2f7e8);
   padding:0 3px;
-  color:#8fa977
+  color:var(--theme-tone-8fa977, #8fa977)
 }
 .paste-preview.error {
   color:#bf957e
@@ -180,10 +180,10 @@ dialog::backdrop {
   margin-top:7px
 }
 .primary-btn {
-  background:#819a6e;
+  background:var(--theme-tone-819a6e, #819a6e);
   color:#fffdf3;
-  border:1px solid #718b5f;
-  box-shadow:0 3px #5f7b4f;
+  border:1px solid var(--theme-tone-718b5f, #718b5f);
+  box-shadow:0 3px var(--theme-tone-5f7b4f, #5f7b4f);
   padding:11px 16px;
   font-size:11px;
   display:inline-flex;
@@ -192,23 +192,23 @@ dialog::backdrop {
   justify-content:center
 }
 .primary-btn:hover {
-  background:#748f61
+  background:var(--theme-tone-748f61, #748f61)
 }
 .paste-footnote {
   font-size:10px!important;
-  color:#a7b298!important;
+  color:var(--theme-tone-a7b298, #a7b298)!important;
   margin:20px 0 0
 }
 .secondary-btn {
-  border:1px solid #d3dfc6;
-  background:#f9fcf3;
+  border:1px solid var(--theme-tone-d3dfc6, #d3dfc6);
+  background:var(--theme-tone-f9fcf3, #f9fcf3);
   padding:8px 12px;
   display:inline-flex;
   align-items:center;
   gap:8px;
   font-size:11px;
-  color:#8ca377;
-  box-shadow:0 2px #eef3e5
+  color:var(--theme-tone-8ca377, #8ca377);
+  box-shadow:0 2px var(--theme-tone-eef3e5, #eef3e5)
 }
 .button-row {
   display:flex;
@@ -231,17 +231,17 @@ dialog::backdrop {
 }
 .editor-number {
   font:10px var(--pixel);
-  color:#b0bf9a;
+  color:var(--theme-tone-b0bf9a, #b0bf9a);
   padding:0 2px
 }
 .team-editor input {
   flex:1;
   min-width:0;
-  border:1px solid #dce5d1;
+  border:1px solid var(--theme-tone-dce5d1, #dce5d1);
   padding:11px;
-  background:#fcfdf8;
+  background:var(--theme-tone-fcfdf8, #fcfdf8);
   font-size:12px;
-  color:#769260
+  color:var(--theme-tone-769260, #769260)
 }
 .remove-team {
   border:1px solid #eadfd2;
@@ -255,9 +255,9 @@ dialog::backdrop {
 .add-team-btn {
   margin-top:12px;
   padding:12px;
-  background:#fafcf5;
-  border:1px dashed #cedcc0;
-  color:#8ba574;
+  background:var(--theme-tone-fafcf5, #fafcf5);
+  border:1px dashed var(--theme-tone-cedcc0, #cedcc0);
+  color:var(--theme-tone-8ba574, #8ba574);
   font-size:11px;
   width:100%;
   text-align:left
@@ -274,18 +274,18 @@ dialog::backdrop {
   gap:15px
 }
 .how-card {
-  border:1px solid #e4ebd9;
+  border:1px solid var(--theme-tone-e4ebd9, #e4ebd9);
   padding:17px;
-  background:#fcfdf9
+  background:var(--theme-tone-fcfdf9, #fcfdf9)
 }
 .how-card>span {
   font:11px var(--pixel);
-  color:#bccaa7
+  color:var(--theme-tone-bccaa7, #bccaa7)
 }
 .how-card h3 {
   font-size:13px;
   font-weight:500;
-  color:#859d72;
+  color:var(--theme-tone-859d72, #859d72);
   margin:9px 0
 }
 .how-card p {
@@ -297,16 +297,16 @@ dialog::backdrop {
   grid-template-columns:1fr 1fr;
   gap:12px;
   font-size:10px;
-  color:#a1b08f;
+  color:var(--theme-tone-a1b08f, #a1b08f);
   margin:20px 0
 }
 kbd {
   font:9px system-ui,sans-serif;
-  border:1px solid #dae4cd;
+  border:1px solid var(--theme-tone-dae4cd, #dae4cd);
   padding:3px 5px;
   margin-right:6px;
-  background:#f7faef;
-  color:#92a77c
+  background:var(--theme-tone-f7faef, #f7faef);
+  color:var(--theme-tone-92a77c, #92a77c)
 }
 .question-list {
   max-height:55vh;
@@ -316,23 +316,23 @@ kbd {
   padding-right:3px
 }
 .question-list button {
-  border:1px solid #e5ebdc;
-  background:#fdfefa;
+  border:1px solid var(--theme-tone-e5ebdc, #e5ebdc);
+  background:var(--theme-tone-fdfefa, #fdfefa);
   padding:13px;
   text-align:left;
   display:flex;
   gap:15px;
   align-items:center;
   font-size:12px;
-  color:#91a37e
+  color:var(--theme-tone-91a37e, #91a37e)
 }
 .question-list button b {
   font:10px var(--pixel);
-  color:#bac8a6
+  color:var(--theme-tone-bac8a6, #bac8a6)
 }
 .question-list button.current {
-  border-color:#b9cc9f;
-  background:#f1f6e7
+  border-color:var(--theme-tone-b9cc9f, #b9cc9f);
+  background:var(--theme-tone-f1f6e7, #f1f6e7)
 }
 .birthday-tools-link {
   width:100%;
@@ -390,28 +390,28 @@ kbd {
   gap:12px
 }
 .tools-grid button {
-  border:1px solid #e0e9d3;
-  background:#fafcf5;
+  border:1px solid var(--theme-tone-e0e9d3, #e0e9d3);
+  background:var(--theme-tone-fafcf5, #fafcf5);
   padding:15px;
   text-align:left;
-  color:#8ba477;
+  color:var(--theme-tone-8ba477, #8ba477);
   font-size:12px
 }
 .tools-grid small {
   display:block;
   font-size:10px;
-  color:#afbaa0;
+  color:var(--theme-tone-afbaa0, #afbaa0);
   line-height:1.7;
   margin-top:5px
 }
 .details-box {
-  border:1px solid #e1e8d7;
+  border:1px solid var(--theme-tone-e1e8d7, #e1e8d7);
   padding:13px;
   margin-top:18px
 }
 .details-box summary {
   font-size:11px;
-  color:#8fa57d;
+  color:var(--theme-tone-8fa57d, #8fa57d);
   cursor:pointer
 }
 .details-box p {
@@ -427,7 +427,7 @@ kbd {
   margin:18px 0!important
 }
 .settings-actions {
-  border-top:1px solid #e6ecdf;
+  border-top:1px solid var(--theme-tone-e6ecdf, #e6ecdf);
   margin-top:20px;
   padding-top:20px;
   display:flex;
@@ -448,13 +448,13 @@ kbd {
   margin-top:10px
 }
 .review-answer {
-  background:#f2f6e9;
+  background:var(--theme-tone-f2f6e9, #f2f6e9);
   padding:8px 10px;
   display:flex;
   justify-content:space-between;
   gap:10px;
   font-size:11px;
-  color:#93aa7c
+  color:var(--theme-tone-93aa7c, #93aa7c)
 }
 .confetti-bit {
   position:fixed;

@@ -16,7 +16,7 @@
   font:8px var(--pixel);
   letter-spacing:1px;
   z-index:2;
-  box-shadow:2px 2px #e7e8dc
+  box-shadow:2px 2px var(--theme-tone-e7e8dc, #e7e8dc)
 }
 .board-sign span {
   font:16px system-ui;
@@ -38,11 +38,11 @@
 }
 .game-board {
   position:relative;
-  background:#fff;
-  border:3px solid #c9d6be;
-  outline:1px solid #edf0e8;
+  background:var(--theme-tone-fff, #fff);
+  border:3px solid var(--theme-tone-c9d6be, #c9d6be);
+  outline:1px solid var(--theme-tone-edf0e8, #edf0e8);
   padding:17px 24px 13px;
-  box-shadow:5px 5px #e6ebdf55,0 16px 40px #657e4f08
+  box-shadow:5px 5px var(--theme-tone-e6ebdf55, #e6ebdf55),0 16px 40px var(--theme-tone-657e4f08, #657e4f08)
 }
 .game-board:before,.game-board:after {
   content:'';
@@ -50,8 +50,8 @@
   top:-3px;
   width:9px;
   height:9px;
-  background:#f6f6e8;
-  border:1px solid #a9bc98
+  background:var(--theme-tone-f6f6e8, #f6f6e8);
+  border:1px solid var(--theme-tone-a9bc98, #a9bc98)
 }
 .game-board:before {
   left:-3px
@@ -62,7 +62,7 @@
 .board-topline {
   font-size:8px;
   letter-spacing:1.4px;
-  color:#9cab8c;
+  color:var(--theme-tone-9cab8c, #9cab8c);
   display:flex;
   justify-content:space-between;
   padding-bottom:13px
@@ -72,14 +72,14 @@
   display:inline-block;
   width:4px;
   height:4px;
-  background:#adc18f;
+  background:var(--theme-tone-adc18f, #adc18f);
   margin-right:7px;
   vertical-align:middle
 }
 .question-card {
-  background:#fcfdf8;
+  background:var(--theme-tone-fcfdf8, #fcfdf8);
   padding:15px 18px 16px;
-  border:1px solid #e9eddf;
+  border:1px solid var(--theme-tone-e9eddf, #e9eddf);
   min-height:110px;
   display:flex;
   justify-content:center;
@@ -89,7 +89,7 @@
   display:flex;
   justify-content:space-between;
   align-items:center;
-  color:#92a27f;
+  color:var(--theme-tone-92a27f, #92a27f);
   font-size:8px;
   letter-spacing:1.5px;
   font-weight:550
@@ -104,7 +104,7 @@
   letter-spacing:-.25px;
   line-height:1.5;
   margin:10px 0 0;
-  color:#4a6344
+  color:var(--theme-tone-4a6344, #4a6344)
 }
 .board-middle {
   display:flex;
@@ -114,7 +114,7 @@
 }
 .board-legend {
   font-size:8px;
-  color:#98a785;
+  color:var(--theme-tone-98a785, #98a785);
   letter-spacing:1px;
   display:flex;
   gap:7px;
@@ -131,16 +131,16 @@
 .pot-label {
   font-size:7px;
   letter-spacing:1px;
-  color:#9baa8a;
+  color:var(--theme-tone-9baa8a, #9baa8a);
   display:flex;
   align-items:center;
   gap:9px
 }
 .pot-label strong {
-  background:#f3f6e9;
-  border:1px solid #d5e0c7;
+  background:var(--theme-tone-f3f6e9, #f3f6e9);
+  border:1px solid var(--theme-tone-d5e0c7, #d5e0c7);
   padding:7px 9px 4px;
-  color:#73905b;
+  color:var(--theme-tone-73905b, #73905b);
   font:20px var(--pixel);
   letter-spacing:2px;
   min-width:72px;
@@ -154,9 +154,9 @@
   gap:10px 13px
 }
 .answer {
-  border:1px solid #dce5cf;
-  background:#f8faf3;
-  box-shadow:inset 0 -3px #eef2e5;
+  border:1px solid var(--theme-tone-dce5cf, #dce5cf);
+  background:var(--theme-tone-f8faf3, #f8faf3);
+  box-shadow:inset 0 -3px var(--theme-tone-eef2e5, #eef2e5);
   display:flex;
   align-items:center;
   gap:12px;
@@ -169,12 +169,12 @@
   flex-shrink:0;
   display:grid;
   place-items:center;
-  border:1px solid #d5e0c3;
+  border:1px solid var(--theme-tone-d5e0c3, #d5e0c3);
   min-width:32px;
   height:29px;
-  background:#f1f5e7;
+  background:var(--theme-tone-f1f5e7, #f1f5e7);
   font:10px var(--pixel);
-  color:#98ad7e;
+  color:var(--theme-tone-98ad7e, #98ad7e);
   padding-top:2px
 }
 .slot-sprout {
@@ -182,43 +182,43 @@
   right:39px;
   width:21px;
   height:21px;
-  color:#d8e2ca
+  color:var(--theme-tone-d8e2ca, #d8e2ca)
 }
 .slot-caption {
   font-size:10px;
-  color:#b3bea5;
+  color:var(--theme-tone-b3bea5, #b3bea5);
   letter-spacing:.2px
 }
 .slot-star {
   position:absolute;
   right:12px;
-  color:#c6d4b5;
+  color:var(--theme-tone-c6d4b5, #c6d4b5);
   font-size:17px
 }
 .answer.revealed {
-  border-color:#bdcfa6;
-  background:#eaf1df;
-  box-shadow:inset 0 -3px #dde8cc;
+  border-color:var(--theme-tone-bdcfa6, #bdcfa6);
+  background:var(--theme-tone-eaf1df, #eaf1df);
+  box-shadow:inset 0 -3px var(--theme-tone-dde8cc, #dde8cc);
   animation:bloom .3s ease-out
 }
 .answer.revealed .rank {
-  border-color:#b5c99c;
-  background:#dce8cb;
-  color:#7b975b
+  border-color:var(--theme-tone-b5c99c, #b5c99c);
+  background:var(--theme-tone-dce8cb, #dce8cb);
+  color:var(--theme-tone-7b975b, #7b975b)
 }
 .answer-text {
   font-size:14px;
   line-height:1.35;
   font-weight:550;
-  color:#4b6640;
+  color:var(--theme-tone-4b6640, #4b6640);
   flex:1;
   overflow-wrap:anywhere
 }
 .answer-count {
   font:18px var(--pixel);
-  border-left:1px solid #c8d6b4;
+  border-left:1px solid var(--theme-tone-c8d6b4, #c8d6b4);
   padding-left:11px;
-  color:#739251;
+  color:var(--theme-tone-739251, #739251);
   flex-shrink:0
 }
 .answer.empty {
@@ -295,7 +295,7 @@
   align-items:center;
   margin-top:12px;
   min-height:25px;
-  color:#a1ae90
+  color:var(--theme-tone-a1ae90, #a1ae90)
 }
 .strikes {
   display:flex;
@@ -305,7 +305,7 @@
 .strike {
   font:27px/22px system-ui;
   width:20px;
-  color:#e0e6d7
+  color:var(--theme-tone-e0e6d7, #e0e6d7)
 }
 .strike.on {
   color:#cf9e8a;
@@ -314,7 +314,7 @@
 .strikes button {
   background:none;
   border:0;
-  color:#a7b391;
+  color:var(--theme-tone-a7b391, #a7b391);
   padding:0 3px;
   font-size:15px;
   margin-left:3px
@@ -341,20 +341,20 @@
 .guess-topline label {
   font-size:7px;
   letter-spacing:1.2px;
-  color:#a3ae95;
+  color:var(--theme-tone-a3ae95, #a3ae95);
   display:flex;
   gap:8px;
   align-items:center
 }
 .guess-topline select {
   border:0;
-  border-bottom:1px solid #dfe5d5;
+  border-bottom:1px solid var(--theme-tone-dfe5d5, #dfe5d5);
   padding:0 17px 2px 0;
   background:transparent;
   font-size:10px;
   font-weight:550;
   letter-spacing:0;
-  color:#7e956a;
+  color:var(--theme-tone-7e956a, #7e956a);
   max-width:210px;
   border-radius:0
 }
@@ -362,15 +362,15 @@
   background:none;
   border:0;
   font-size:9px;
-  color:#94a381;
+  color:var(--theme-tone-94a381, #94a381);
   padding:0
 }
 .guess-topline>button span {
   margin-left:10px
 }
 .guess-entry {
-  border:1px solid #c9d8bc;
-  box-shadow:0 3px #edf1e6;
+  border:1px solid var(--theme-tone-c9d8bc, #c9d8bc);
+  box-shadow:0 3px var(--theme-tone-edf1e6, #edf1e6);
   display:flex;
   align-items:center;
   background:white;
@@ -381,7 +381,7 @@
 .guess-entry>svg {
   width:20px;
   height:20px;
-  color:#b5c79e;
+  color:var(--theme-tone-b5c79e, #b5c79e);
   flex-shrink:0
 }
 .guess-entry input {
@@ -392,23 +392,23 @@
   background:none;
   font-size:14px;
   padding:8px 0;
-  color:#526c48
+  color:var(--theme-tone-526c48, #526c48)
 }
 .guess-entry input::placeholder {
-  color:#b0bba5
+  color:var(--theme-tone-b0bba5, #b0bba5)
 }
 .guess-entry:focus-within {
-  outline:2px solid #c5d7b1;
+  outline:2px solid var(--theme-tone-c5d7b1, #c5d7b1);
   outline-offset:2px
 }
 .guess-entry input:focus-visible {
   outline:0
 }
 .guess-entry button {
-  border:1px solid #6f895d;
-  background:#7d966b;
+  border:1px solid var(--theme-tone-6f895d, #6f895d);
+  background:var(--theme-tone-7d966b, #7d966b);
   color:#fffef4;
-  box-shadow:0 2px #58734a;
+  box-shadow:0 2px var(--theme-tone-58734a, #58734a);
   padding:10px 16px;
   font-size:11px;
   display:flex;
@@ -417,12 +417,12 @@
   white-space:nowrap
 }
 .guess-entry button:hover {
-  background:#6f895d
+  background:var(--theme-tone-6f895d, #6f895d)
 }
 .guess-entry button span {
   font-size:16px;
   line-height:16px;
-  color:#e1e9d4
+  color:var(--theme-tone-e1e9d4, #e1e9d4)
 }
 .guess-footer {
   display:flex;
@@ -434,12 +434,12 @@
 }
 .guess-feedback {
   font-size:10px;
-  color:#a4af96;
+  color:var(--theme-tone-a4af96, #a4af96);
   flex:1;
   line-height:1.7
 }
 .guess-feedback.correct {
-  color:#779358
+  color:var(--theme-tone-779358, #779358)
 }
 .guess-feedback.wrong {
   color:#ba8e79
@@ -456,7 +456,7 @@
   font-size:9px;
   border:0;
   background:none;
-  color:#a5b195;
+  color:var(--theme-tone-a5b195, #a5b195);
   padding:0;
   white-space:nowrap
 }
@@ -467,7 +467,7 @@
 .birthday-note {
   text-align:center;
   font-size:9px;
-  color:#b1b8a5;
+  color:var(--theme-tone-b1b8a5, #b1b8a5);
   margin-top:20px;
   letter-spacing:.3px
 }
