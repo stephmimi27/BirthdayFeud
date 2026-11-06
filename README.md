@@ -24,7 +24,7 @@ npm run preview  # serve the production build locally
 ## Deploy to Vercel
 
 1. Unzip the source package. Upload the **contents** of `birthday-feud/` into the root of a GitHub repository, including `package.json`, `package-lock.json`, `vercel.json`, `src/`, `public/` and `scripts/`.
-2. In Vercel, choose **Add New → Project** and import that repository.
+2. In Vercel, choose **Add Ngiew → Project** and import that repository.
 3. Use these settings. The included `vercel.json` already supplies the commands and output folder.
 
 | Setting | Value |
@@ -78,7 +78,7 @@ CSS loads in this order: base, layout, board, teams, dialogs, responsive, effect
 
 ## Party themes
 
-Choose **Theme** in the top bar to switch between Garden, Classic birthday, Pajama party, Glitter and stars, and Ocean. Each uses pixel illustrations, matching colors and scene decorations. Your choice saves automatically in this browser, separately from game progress.
+Choose **Theme** in the top bar to switch between Garden, Classic birthday, Pajama party, Celestial, and Ocean. Each uses pixel illustrations, matching colors and scene decorations. Classic birthday features a strawberry layer cake, candles, balloons, wrapped gifts, confetti and icing borders. Ocean features a coral reef, fish, jellyfish, a seahorse, pearl shells, a treasure chest and wave borders. Pajama party features chamomile tea, a curtained moonlit window, books, candlelight and a sleeping cat. Celestial features a deep starfield, constellations, a crescent moon, Saturn and a telescope with gold moon-phase borders. Your choice saves automatically in this browser, separately from game progress.
 
 ## Import your survey
 

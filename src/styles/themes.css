@@ -287,3 +287,217 @@
   .import-btn {padding:7px 6px;gap:4px}
   .import-btn .button-arrow {display:none}
 }
+
+/* Sleepy tea: warm linen, rose ceramics, sage stitching and honey light. */
+:root[data-theme=pajama] {
+  --theme-hue:22;--theme-saturation:24%;
+  --ink:#594953;--deep:#755865;--sage:#8d9a7c;--muted:#9d8589;
+  --paper:#fffaf1;--line:#e6d7c6;--blush:#d9aaa6;--gold:#ac834b;
+  --theme-tone-fff:#fffaf1;--theme-tone-ffffff:#fffaf1;
+}
+:root[data-theme=pajama] .greenhouse {
+  background-color:#f8eee1;
+  background-image:linear-gradient(90deg,#e2c4b41f 50%,transparent 50%),linear-gradient(#e2c4b41f 50%,transparent 50%);
+  background-size:20px 20px;
+  border-bottom:3px solid #d6b8a4;
+}
+:root[data-theme=pajama] .topbar {background:#fffbf3;border-bottom:2px solid #dbc7b8}
+:root[data-theme=pajama] .brand-mark {background:#f0e4d7;border-color:#cfb3a3;box-shadow:3px 3px #e8d5c4}
+:root[data-theme=pajama] .hero h1 {color:#795964;text-shadow:2px 2px #e5c6b5}
+:root[data-theme=pajama] .hero :is(.eyebrow,p) {color:#8e736f}
+:root[data-theme=pajama] .hero .eyebrow>span {color:#b4925d}
+:root[data-theme=pajama] .game-board {
+  background:#fffcf5;border:3px solid #c5a58e;
+  box-shadow:0 0 0 3px #fffbf1,0 0 0 5px #ddc8b5,5px 8px 0 #bfa28a24;
+}
+:root[data-theme=pajama] .game-board .question-card {background:#f5ece2;border-color:#dfcdbd}
+:root[data-theme=pajama] .question-card h2 {color:#684f54}
+:root[data-theme=pajama] .answer {border-color:#decaba;background:#f9f2e9;box-shadow:inset 0 -3px #ebdfd1}
+:root[data-theme=pajama] .answer .rank {background:#efe5d7;border-color:#d9c6b2;color:#927263}
+:root[data-theme=pajama] .answer.revealed {background:#edf0e4;border-color:#b7bea4;box-shadow:inset 0 -3px #dce2ce}
+:root[data-theme=pajama] .answer.revealed .rank {background:#dbe2cd;border-color:#b5bea0;color:#637253}
+:root[data-theme=pajama] .answer-text {color:#5c664f}
+:root[data-theme=pajama] .birthday-answer {background:#f8eae3;border-color:#d5b0a1}
+:root[data-theme=pajama] .board-sign {background:#fff6e7;color:#806157;border-color:#c6a68c;box-shadow:3px 3px #d8bca64d}
+:root[data-theme=pajama] .board-sign:before,:root[data-theme=pajama] .board-sign:after {background:#b89878}
+:root[data-theme=pajama] .guess-entry {background:#fffbf3;border-color:#d1b8a4}
+:root[data-theme=pajama] #guess-submit {background:#8a967b;color:#fffaf0;border-color:#778468;box-shadow:inset 0 -3px #6f7b61}
+:root[data-theme=pajama] .bunting {border-color:#c4a58b;opacity:.7}
+:root[data-theme=pajama] .bunting i {background:#d6b3ad}
+:root[data-theme=pajama] .bunting i:nth-child(2n) {background:#afb59a}
+:root[data-theme=pajama] .bunting i:nth-child(3n) {background:#e2cda5}
+:root[data-theme=pajama] .team-card {border-color:#d9c6b5;background:#fff9ef}
+:root[data-theme=pajama] .team-card.active {border-color:#9eaa8a;background:#f0f1e6;box-shadow:3px 3px #c6cdb84d}
+
+/* Celestial: a deep ink sky surrounding an ivory and antique-gold star chart. */
+:root[data-theme=stars] {
+  --theme-hue:254;--theme-saturation:28%;
+  --ink:#494361;--sage:#9580b5;--deep:#695483;--muted:#968aab;
+  --paper:#fdf9f0;--line:#dcd3e6;--blush:#b6a0ce;--gold:#b18b4f;
+  --theme-tone-fff:#fdf9f0;--theme-tone-ffffff:#fdf9f0;
+}
+:root[data-theme=stars] .topbar {background:#28283f;border-bottom:1px solid #766487;color:#e9d9b8}
+:root[data-theme=stars] .brand-mark {background:#35344e;border-color:#8e789e;box-shadow:3px 3px #1b1c30}
+:root[data-theme=stars] .brand small {color:#baabc9}
+:root[data-theme=stars] .topbar :is(.text-btn,.icon-btn) {color:#dfcdaa}
+:root[data-theme=stars] .import-btn {background:#41394f;border-color:#9f849a;color:#f1dfbb;box-shadow:2px 2px #1d2031}
+:root[data-theme=stars] .greenhouse {
+  background-color:#292a48;
+  background-image:url('/assets/themes/celestial-sky.svg'),radial-gradient(ellipse at 50% 0,#51416b 0,transparent 65%),linear-gradient(135deg,#24283f,#35304e 65%,#232940);
+  background-size:192px 192px,100% 100%,100% 100%;
+  border-bottom:2px solid #b69b6b;
+}
+:root[data-theme=stars] .hero h1 {color:#f0d7a0;text-shadow:2px 2px #171b32,0 0 25px #eccb8933}
+:root[data-theme=stars] .hero :is(.eyebrow,p) {color:#d4c8e0}
+:root[data-theme=stars] .hero .eyebrow>span {color:#e1c286}
+:root[data-theme=stars] :is(.bunting,.fairy-lights) {display:none}
+:root[data-theme=stars] .game-board {
+  background:#fcf8ef;border:2px solid #bc9d68;
+  box-shadow:0 0 0 3px #3d354e,0 0 0 4px #c3a679,0 12px 32px #0b0d2b55;
+}
+:root[data-theme=stars] .board-lace {height:16px;background:url('/assets/themes/moon-trim.svg') repeat-x center;background-size:120px 16px;filter:none;opacity:.9}
+:root[data-theme=stars] .lace-top {top:-18px;transform:none}
+:root[data-theme=stars] .lace-bottom {bottom:-18px}
+:root[data-theme=stars] .board-sign {background:#38324b;color:#efd4a0;border-color:#b99b6a;box-shadow:3px 3px #1f2137}
+:root[data-theme=stars] .board-sign span {color:#e3c285}
+:root[data-theme=stars] .board-sign:before,:root[data-theme=stars] .board-sign:after {background:#c0a06a}
+:root[data-theme=stars] .question-card {background:#eee8f1;border-color:#d1c3da;box-shadow:inset 3px 0 #baa3c9}
+:root[data-theme=stars] .question-card h2 {color:#49405c}
+:root[data-theme=stars] .answer {background:#f4eff5;border-color:#d4c7dd;box-shadow:inset 0 -3px #e6ddea}
+:root[data-theme=stars] .answer .rank {background:#e9e0ee;border-color:#cdbbd7;color:#8e739f}
+:root[data-theme=stars] .answer.revealed {background:#e7dfef;border-color:#ad94bf;box-shadow:inset 0 -3px #d7c9e3}
+:root[data-theme=stars] .answer.revealed .rank {background:#d5c5e3;border-color:#b199c5;color:#65507f}
+:root[data-theme=stars] .answer-text {color:#534365}
+:root[data-theme=stars] .birthday-answer {background:#fbefd5;border-color:#d7b979;box-shadow:inset 0 -3px #efdfba}
+:root[data-theme=stars] .guess-form {color:#dfd3e7}
+:root[data-theme=stars] .guess-entry {background:#fbf7ef;border-color:#b79a6d;box-shadow:3px 3px #191e3533}
+:root[data-theme=stars] #guess-submit {background:#78618e;color:#fff1d4;border-color:#a38bb6;box-shadow:inset 0 -3px #5f4877}
+:root[data-theme=stars] :is(.guess-topline,.guess-topline label,.guess-feedback,.guess-footer-actions button,#pass-turn) {color:#ddcee5}
+:root[data-theme=stars] #guess-team {background:#3c3552;color:#f2e4c8;border-color:#9681a7}
+:root[data-theme=stars] .lower-garden {background:#f7f2f7}
+:root[data-theme=stars] .team-card.active {background:#eee5f3;border-color:#ac91be;box-shadow:3px 3px #d8c8e1}
+
+.scene-illustration {position:absolute;top:50%;width:clamp(105px,14.5vw,210px);height:auto;max-height:94%;image-rendering:pixelated;transform:translateY(-50%)}
+.scene-left {left:max(10px,calc((100% - 1280px)/2))}
+.scene-right {right:max(10px,calc((100% - 1280px)/2))}
+:root:is([data-theme=pajama],[data-theme=stars]) .theme-scene {z-index:-1}
+:root[data-theme=stars] .ambient-effects {opacity:.5}
+:root[data-theme=pajama] .ambient-effects {opacity:.3}
+.theme-preview:has(.scene-illustration) {position:relative;overflow:hidden;height:112px}
+.theme-preview .scene-illustration {width:75px;height:120px;max-height:none;top:0;transform:none;opacity:1}
+.theme-preview .scene-left {left:5px}
+.theme-preview .scene-right {right:5px}
+.theme-preview:has(.scene-illustration) .theme-swatches {z-index:1;margin-top:65px;padding:5px;background:var(--swatch-paper);border:1px solid var(--swatch)}
+[data-preview-theme=stars] .theme-preview {background:#2d2c47 url('/assets/themes/celestial-sky.svg') center / 140px}
+[data-preview-theme=pajama] .theme-preview {background-color:#f8eee1;background-image:repeating-linear-gradient(90deg,#d6b6a51f 0 10px,transparent 10px 20px)}
+@media(min-width:1600px) {.scene-illustration {width:230px}}
+@media(max-width:1100px) {
+  .theme-scene>.scene-illustration {width:110px;opacity:.85}
+  .theme-scene>.scene-left {left:0}
+  .theme-scene>.scene-right {right:0}
+}
+@media(max-width:960px) {
+  .theme-scene>.scene-illustration {width:85px;top:0;transform:none;opacity:.6}
+  .theme-scene>.scene-left {left:-10px}
+  .theme-scene>.scene-right {right:-10px}
+}
+@media(max-width:600px) {
+  .theme-scene>.scene-illustration {width:60px;opacity:.45;top:-12px}
+  .theme-preview .scene-illustration {width:58px}
+  :root:is([data-theme=pajama],[data-theme=stars]) .board-sign {font-size:6px}
+}
+
+/* Classic birthday: strawberry icing, mint party ribbons and vanilla sponge. */
+:root[data-theme=birthday] {
+  --theme-hue:338;--theme-saturation:33%;
+  --ink:#684955;--deep:#9c546e;--sage:#b7738a;--muted:#a18087;
+  --paper:#fffaf2;--line:#ead2cb;--blush:#9fbdad;--gold:#ae8540;
+  --theme-tone-fff:#fffaf2;--theme-tone-ffffff:#fffaf2;
+}
+:root[data-theme=birthday] .topbar {background:#fff8f0;border-bottom:2px solid #e5bfc2}
+:root[data-theme=birthday] .brand-mark {background:#f6dfe0;border-color:#d7a0ad;box-shadow:3px 3px #eac8c6}
+:root[data-theme=birthday] .brand small {color:#a56e7d}
+:root[data-theme=birthday] .greenhouse {
+  background-color:#fff2e8;
+  background-image:url('/assets/themes/birthday-confetti.svg'),linear-gradient(180deg,#fff6ee,#fbe7df);
+  background-size:192px 192px,100% 100%;border-bottom:3px solid #e0acae;
+}
+:root[data-theme=birthday] .hero h1 {color:#a35e76;text-shadow:2px 2px #efd0ba}
+:root[data-theme=birthday] .hero :is(.eyebrow,p) {color:#9b7077}
+:root[data-theme=birthday] .game-board {
+  background:#fffcf5;border:3px solid #d5a0aa;
+  box-shadow:0 0 0 3px #fff6de,0 0 0 5px #e9c1bc,5px 8px 0 #c895a424;
+}
+:root[data-theme=birthday] .board-lace {height:16px;background:url('/assets/themes/birthday-icing.svg') repeat-x center;background-size:96px 16px;filter:none}
+:root[data-theme=birthday] .lace-top {top:-16px;transform:scaleY(-1)}
+:root[data-theme=birthday] .lace-bottom {bottom:-16px}
+:root[data-theme=birthday] .board-sign {background:#fbe3dc;color:#96516b;border-color:#c98b9d;box-shadow:3px 3px #e5b5b344}
+:root[data-theme=birthday] .board-sign span {color:#bb7d58}
+:root[data-theme=birthday] .board-sign:before,:root[data-theme=birthday] .board-sign:after {background:#c78d98}
+:root[data-theme=birthday] .question-card {background:#f8e7df;border-color:#e6c8bc;box-shadow:inset 3px 0 #dfacb8}
+:root[data-theme=birthday] .question-card h2 {color:#7e5262}
+:root[data-theme=birthday] .answer {background:#fff4e8;border-color:#e6ceba;box-shadow:inset 0 -3px #f0e0cc}
+:root[data-theme=birthday] .answer .rank {background:#f1dce0;border-color:#d6aab7;color:#a15e78}
+:root[data-theme=birthday] .answer.revealed {background:#e8f1e6;border-color:#a9c5ac;box-shadow:inset 0 -3px #d3e3d0}
+:root[data-theme=birthday] .answer.revealed .rank {background:#d2e5d7;border-color:#aac2ad;color:#5c7d65}
+:root[data-theme=birthday] .answer-text {color:#5c735f}
+:root[data-theme=birthday] .answer-count {color:#65856f;border-color:#b3ceb7}
+:root[data-theme=birthday] .birthday-answer {background:#fce4e6;border-color:#d998aa;box-shadow:inset 0 -3px #f1cbd1}
+:root[data-theme=birthday] .guess-entry {background:#fffbf4;border-color:#d4a2af}
+:root[data-theme=birthday] #guess-submit {background:#ad637e;border-color:#99516e;color:#fff9e9;box-shadow:inset 0 -3px #8f4d69}
+:root[data-theme=birthday] .bunting {border-color:#c89897;opacity:.85}
+:root[data-theme=birthday] .bunting i {background:#dfa1b2}
+:root[data-theme=birthday] .bunting i:nth-child(2n) {background:#adc6b5}
+:root[data-theme=birthday] .bunting i:nth-child(3n) {background:#e4c58a}
+:root[data-theme=birthday] .team-card {background:#fff7ed;border-color:#e1c7bb}
+:root[data-theme=birthday] .team-card.active {background:#f8e7e5;border-color:#ce9aaa;box-shadow:3px 3px #edcbd0}
+:root[data-theme=birthday] .import-btn {background:#ebf1e5;border-color:#bacfb7;color:#5c7d65;box-shadow:2px 2px #d7e2cd}
+:root[data-theme=birthday] .ambient-effects {opacity:.35}
+
+/* Ocean: a turquoise reef, pearl inlay and the colors of sunlit shallows. */
+:root[data-theme=ocean] {
+  --theme-hue:179;--theme-saturation:26%;
+  --ink:#345e64;--deep:#30777b;--sage:#5c9d98;--muted:#7b9b98;
+  --paper:#f5fcf4;--line:#c5dfd2;--blush:#df9c94;--gold:#aa8a4c;
+  --theme-tone-fff:#f5fcf4;--theme-tone-ffffff:#f5fcf4;
+}
+:root[data-theme=ocean] .topbar {background:#eaf6ed;border-bottom:2px solid #93c7be}
+:root[data-theme=ocean] .brand-mark {background:#d4e9df;border-color:#8fbdb3;box-shadow:3px 3px #bad8cd}
+:root[data-theme=ocean] .brand small {color:#5d8b89}
+:root[data-theme=ocean] .greenhouse {
+  background-color:#b4ded6;
+  background-image:url('/assets/themes/ocean-water.svg'),linear-gradient(165deg,#d2eee1 0,#b8ded2 35%,#85bebd 100%);
+  background-size:192px 192px,100% 100%;border-bottom:3px solid #77aba4;
+}
+:root[data-theme=ocean] .hero h1 {color:#306971;text-shadow:2px 2px #e0f2df}
+:root[data-theme=ocean] .hero :is(.eyebrow,p) {color:#507b7e}
+:root[data-theme=ocean] .hero .eyebrow>span {color:#a37f48}
+:root[data-theme=ocean] :is(.bunting,.fairy-lights) {display:none}
+:root[data-theme=ocean] .game-board {
+  background:#f7fcf1;border:3px solid #85b8aa;
+  box-shadow:0 0 0 3px #f3e5c5,0 0 0 5px #81b2a7,5px 8px 0 #3b7b7726;
+}
+:root[data-theme=ocean] .board-lace {height:16px;background:url('/assets/themes/ocean-wave-trim.svg') repeat-x center;background-size:96px 16px;filter:none}
+:root[data-theme=ocean] .lace-top {top:-18px;transform:none}
+:root[data-theme=ocean] .lace-bottom {bottom:-18px;transform:scaleY(-1)}
+:root[data-theme=ocean] .board-sign {background:#f3e9d0;color:#527878;border-color:#afbb9d;box-shadow:3px 3px #4c8a7e22}
+:root[data-theme=ocean] .board-sign span {color:#b98d72}
+:root[data-theme=ocean] .board-sign:before,:root[data-theme=ocean] .board-sign:after {background:#a6b9a0}
+:root[data-theme=ocean] .question-card {background:#e3efe6;border-color:#bad4c7;box-shadow:inset 3px 0 #8ebcaf}
+:root[data-theme=ocean] .question-card h2 {color:#37656a}
+:root[data-theme=ocean] .answer {background:#eaf5ed;border-color:#bcd9cb;box-shadow:inset 0 -3px #d7e8db}
+:root[data-theme=ocean] .answer .rank {background:#d8e9df;border-color:#a9cab9;color:#648d83}
+:root[data-theme=ocean] .answer.revealed {background:#d3e9df;border-color:#82b5a9;box-shadow:inset 0 -3px #b7d7ca}
+:root[data-theme=ocean] .answer.revealed .rank {background:#bddccf;border-color:#84b4a5;color:#397c71}
+:root[data-theme=ocean] .answer-text {color:#345f61}
+:root[data-theme=ocean] .answer-count {color:#3c807b;border-color:#9ac5b7}
+:root[data-theme=ocean] .birthday-answer {background:#f7e5d8;border-color:#dbb39b;box-shadow:inset 0 -3px #edcfbb}
+:root[data-theme=ocean] .guess-entry {background:#f8fcf3;border-color:#87b9ac}
+:root[data-theme=ocean] #guess-submit {background:#4f918d;border-color:#3b7e7a;color:#f8f4d9;box-shadow:inset 0 -3px #367b78}
+:root[data-theme=ocean] .team-card {background:#eff8ed;border-color:#bdd7c5}
+:root[data-theme=ocean] .team-card.active {background:#e0eee0;border-color:#8bb89f;box-shadow:3px 3px #c6dfcf}
+:root[data-theme=ocean] .import-btn {background:#dceee1;border-color:#a6c7b3;color:#407b70;box-shadow:2px 2px #c4ddcd}
+:root[data-theme=ocean] .ambient-effects {opacity:.3}
+
+[data-preview-theme=birthday] .theme-preview {background:#fff0e5 url('/assets/themes/birthday-confetti.svg') center / 140px}
+[data-preview-theme=ocean] .theme-preview {background:#b7dcd1 url('/assets/themes/ocean-water.svg') center / 140px}

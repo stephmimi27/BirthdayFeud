@@ -28,7 +28,7 @@ async function scan(directory) {
     }
     if (entry.name.endsWith('.js')) {
       for (const match of text.matchAll(/\bfrom\s+['"]([^'"]+)['"]/g)) await reference(match[1], file);
-      for (const match of text.matchAll(/href="(\/assets\/[^"#]+)(?:#[^"]*)?"/g)) await reference(match[1], file);
+      for (const match of text.matchAll(/(?:href|src)="(\/assets\/[^"#]+)(?:#[^"]*)?"/g)) await reference(match[1], file);
     }
     if (entry.name.endsWith('.css')) {
       for (const match of text.matchAll(/url\(\s*(['"]?)(.*?)\1\s*\)/g)) await reference(match[2], file);
