@@ -2,6 +2,8 @@
 
 A birthday Family Feud game with a white pixel greenhouse, hanging plants, fine lace, sparkles and a winner celebration. Paste survey responses from Google Sheets, type guesses, and award round points to any number of teams.
 
+https://birthdayfeud.vercel.app/
+
 ## Run locally
 
 Install Node.js 24, then run:
@@ -24,7 +26,7 @@ npm run preview  # serve the production build locally
 ## Deploy to Vercel
 
 1. Unzip the source package. Upload the **contents** of `birthday-feud/` into the root of a GitHub repository, including `package.json`, `package-lock.json`, `vercel.json`, `src/`, `public/` and `scripts/`.
-2. In Vercel, choose **Add Ngiew → Project** and import that repository.
+2. In Vercel, choose **Add New → Project** and import that repository.
 3. Use these settings. The included `vercel.json` already supplies the commands and output folder.
 
 | Setting | Value |
